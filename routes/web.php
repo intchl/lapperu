@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeritaController;
+
+//use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +71,6 @@ Route::get('/lihat-berita', function () {
 Route::get('/blank', function () {
     return view('user.pages.blank');
 });
+
+Route::get('/Berita', [BeritaController::class, 'index']);
+Route::resource('berita', BeritaController::class);
