@@ -12,9 +12,10 @@
         </a>
       </div>
 
+    
       <div class="card shadow-sm">
         <div class="card-body">
-          <form action="/simpan-berita" method="POST" enctype="multipart/form-data">
+          <form action="{{ route('berita.store') }}" method="POST" enctype="multipart/form-data">
             {{-- CSRF Token wajib ada di Laravel untuk keamanan form --}}
             @csrf
 
@@ -52,6 +53,7 @@
       </div>
     </div>
   </div>
+
 @endsection
 
 @push('js')

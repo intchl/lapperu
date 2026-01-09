@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\ProdukWbpController;
 
 //use Illuminate\Support\Facades\DB;
 
@@ -24,7 +25,7 @@ Route::get('/', function () {
 });
 
 // user
-Route::get('/berita', function () {
+Route::get('/berita-kami', function () {
     return view('user.pages.berita');
 });
 Route::get('/berita-detail', function () {
@@ -74,3 +75,20 @@ Route::get('/blank', function () {
 
 Route::get('/Berita', [BeritaController::class, 'index']);
 Route::resource('berita', BeritaController::class);
+
+//Route::get('/ProdukWbp', [ProdukWbpController::class, 'index']);
+//Route::resource('berita', ProdukWbpController::class);
+
+Route::resource('berita', BeritaController::class)->names([
+    'index'   => 'berita.index',
+    'create'  => 'berita.create',
+    'store'   => 'berita.store',
+    'show'    => 'berita.show',
+    'edit'    => 'berita.edit',
+    'update'  => 'berita.update',
+    'destroy' => 'berita.destroy',
+]);
+
+// USER DETAIL BERITA
+Route::get('/berita/{id}', [BeritaController::class, 'detail'])
+    ->name('berita.detail');

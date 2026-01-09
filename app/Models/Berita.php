@@ -8,22 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
+
     protected $table = 'berita';
+
     protected $primaryKey = 'id';
 
     public $timestamps = false;
 
     protected $fillable = [
         'judul',
-        'foto',
         'tanggal',
+        'foto',
         'isi',
         'dilihat'
     ];
-
-    protected $casts = [
-        'tanggal' => 'date',
-        'tanggal_input' => 'datetime',
-    ];
-
 }
