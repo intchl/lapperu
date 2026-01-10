@@ -250,45 +250,57 @@
 
         <!-- Social Media Start -->
         <div class="container-fluid social-media overflow-hidden py-5">
-            <div class="container">
-                <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 50px;">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">HUBUNG KAMI</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Koneksi Melalui Media Sosial</h1>
-                    <p class="mb-0">Ikuti kami untuk informasi terkini seputar Lapas Perempuan Kelas IIA Pekanbaru.</p>
-                </div>
+                    <div class="container">
+                        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 50px;">
+                            <div class="sub-style">
+                                <h5 class="sub-title text-primary px-3">HUBUNG KAMI</h5>
+                            </div>
+                            <h1 class="display-5 mb-4">Koneksi Melalui Media Sosial</h1>
+                            <p class="mb-0">Ikuti kami untuk informasi terkini seputar Lapas Perempuan Kelas IIA Pekanbaru.</p>
+                        </div>
 
-                <div class="row g-4 text-center justify-content-center">
-                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="https://www.instagram.com/lpp_pekanbaru/" target="_blank" class="social-item d-block text-decoration-none">
-                            <i class="fab fa-instagram fa-5x" style="color: #E1306C;"></i>
-                            <span class="social-text instagram-text fs-5">Instagram</span>
-                        </a>
-                    </div>
+                        <div class="row g-4 text-center justify-content-center">
+                            <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.1s">
+                                <a href="https://www.instagram.com/lpperempuanpekanbaru/?hl=en" target="_blank" class="social-item d-block text-decoration-none">
+                                    <i class="fab fa-instagram fa-5x" style="color: #E1306C;"></i>
+                                    <div class="mt-3">
+                                        <span class="social-text instagram-text fs-5 d-block fw-bold">Instagram</span>
+                                        <small class="text-muted">@lpperempuanpekanbaru</small>
+                                    </div>
+                                </a>
+                            </div>
 
-                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="https://www.facebook.com/lpp.pekanbaru" target="_blank" class="social-item d-block text-decoration-none">
-                            <i class="fab fa-facebook-f fa-5x" style="color: #1877F2;"></i>
-                            <span class="social-text facebook-text fs-5">Facebook</span>
-                        </a>
-                    </div>
+                            <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+                                <a href="https://www.facebook.com/people/lpperempuanpekanbaru/100089841414386/" target="_blank" class="social-item d-block text-decoration-none">
+                                    <i class="fab fa-facebook-f fa-5x" style="color: #1877F2;"></i>
+                                    <div class="mt-3">
+                                        <span class="social-text facebook-text fs-5 d-block fw-bold">Facebook</span>
+                                        <small class="text-muted">Lapas Perempuan Pekanbaru</small>
+                                    </div>
+                                </a>
+                            </div>
 
-                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="https://www.tiktok.com/@lpp_pekanbaru" target="_blank" class="social-item d-block text-decoration-none">
-                            <i class="fab fa-tiktok fa-5x" style="color: #000000;"></i>
-                            <span class="social-text tiktok-text fs-5">TikTok</span>
-                        </a>
-                    </div>
+                            <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="https://www.tiktok.com/@lapasperempuanpkbr" target="_blank" class="social-item d-block text-decoration-none">
+                                    <i class="fab fa-tiktok fa-5x" style="color: #000000;"></i>
+                                    <div class="mt-3">
+                                        <span class="social-text tiktok-text fs-5 d-block fw-bold">TikTok</span>
+                                        <small class="text-muted">@lapasperempuanpkbr </small>
+                                    </div>
+                                </a>
+                            </div>
 
-                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <a href="https://x.com/lpp_pekanbaru" target="_blank" class="social-item d-block text-decoration-none">
-                            <i class="fab fa-twitter fa-5x" style="color: #1877F2;"></i>
-                            <span class="social-text x-text fs-5">X (Twitter)</span>
-                        </a>
+                            <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.7s">
+                                <a href="https://x.com/LppPku/" target="_blank" class="social-item d-block text-decoration-none">
+                                    <i class="fab fa-twitter fa-5x" style="color: #1877F2;"></i>
+                                    <div class="mt-3">
+                                        <span class="social-text x-text fs-5 d-block fw-bold">X (Twitter)</span>
+                                        <small class="text-muted">@lpp_pku</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
         </div>
         <!-- Social Media End -->
 @endsection

@@ -6,13 +6,13 @@ Berita Kami
 
 @section('content')
 <div class="container-fluid features overflow-hidden py-5">
-     <div class="container py-5">
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h5 class="sub-title text-primary px-3">Berita Kami</h5>
-            </div>
-                   
-        </div>
+    <div class="container">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 50px;">
+                            <div class="sub-style">
+                                <h5 class="sub-title text-primary px-3">Berita</h5>
+                            </div>
+                            <h1 class="display-5 mb-4">Berita & Info Terkini</h1>
+                </div>
         <div class="row g-4 justify-content-center text-center">
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="feature-item text-center p-4">

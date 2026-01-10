@@ -11,27 +11,40 @@
         <!-- Topbar Start -->
         <div class="container-fluid bg-primary px-5 d-none d-lg-block">
             <div class="row gx-0 align-items-center">
-                <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+                <div class="col-lg-6 text-center text-lg-start mb-lg-0">
                     <div class="d-flex">
-                        <a href="#" class="text-white me-4"><i class="fas fa-envelope text-secondary me-2"></i>Example@gmail.com</a>
-                        <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890</a>
+                        <a href="#" class="text-white me-4"><i class="fas fa-envelope text-secondary me-2"></i>lpperempuanpekanbaru@gmail.com</a>
+                        <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>(0761) 8402148</a>
                     </div>
                 </div>
-                <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-tiktok fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-twitter fw-normal text-secondary"></i></a>
-                    </div>
+
+               <div class="col-lg-6 text-center text-lg-end mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" 
+                    href="https://www.instagram.com/lpperempuanpekanbaru/?hl=en" 
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram fw-normal text-secondary"></i>
+                    </a>
+                    
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" 
+                    href="https://www.facebook.com/people/lpperempuanpekanbaru/100089841414386/" 
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f fw-normal text-secondary"></i>
+                    </a>
+                    
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" 
+                    href="https://www.tiktok.com/@lapasperempuanpkbr" 
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok fw-normal text-secondary"></i>
+                    </a>
+                    
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle" 
+                    href="https://x.com/LppPku/" 
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter fw-normal text-secondary"></i>
+                    </a>
                 </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#" class="text-white me-2"> Help</a><small> / </small>
-                        <a href="#" class="text-white mx-2"> Support</a><small> / </small>
-                        <a href="#" class="text-white ms-2"> Contact</a>
-                    </div>
-                </div>
+            </div>
             </div>
         </div>
         <!-- Topbar End -->
@@ -52,7 +65,15 @@
                     <div class="navbar-nav ms-auto py-0">
                         
                         <a href="/" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Beranda</a>
-                        <a href="/profil" class="nav-item nav-link {{ Request::is('profil*') ? 'active' : '' }}">Profil</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link {{ Request::is('profil*', 'struktur-organisasi*') ? 'active' : '' }}" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Profil</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+                                <a href="/profil" class="dropdown-item {{ Request::is('profil*') ? 'active' : '' }}">Tentang Kami</a>
+                                <a href="/struktur-organisasi" class="dropdown-item {{ Request::is('struktur-organisasi*') ? 'active' : '' }}">Struktur Organisasi</a>
+                            </div>
+                        </div>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link {{ Request::is('daftar-pengunjung*', 'layanan-wbp*', 'produk-wbp*') ? 'active' : '' }}" data-bs-toggle="dropdown">
@@ -65,7 +86,7 @@
                             </div>
                         </div>
 
-                        <a href="/berita" class="nav-item nav-link {{ Request::is('berita*') ? 'active' : '' }}">Berita</a>
+                        <a href="/berita-kami" class="nav-item nav-link {{ Request::is('berita*') ? 'active' : '' }}">Berita</a>
                     </div>
                 </div>
             </nav>

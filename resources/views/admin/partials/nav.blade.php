@@ -18,9 +18,7 @@
             <span>Stebin Ben</span>
           </a>
           <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-            <div class="dropdown-header"><h6>Stebin Ben</h6></div>
-            <a href="#!" class="dropdown-item"><i class="ti ti-user"></i> Profile</a>
-            <a href="#!" class="dropdown-item"><i class="ti ti-power text-danger"></i> Logout</a>
+            <a href="/login" class="dropdown-item"><i class="ti ti-power text-danger"></i> Logout</a>
           </div>
         </li>
       </ul>

@@ -19,10 +19,10 @@
                             </div>
 
                             <div class="d-flex align-items-center mt-3">
-                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://facebook.com/lpp.pekanbaru" target="_blank"><i class="fab fa-facebook-f text-primary"></i></a>
-                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://x.com/lpp_pekanbaru" target="_blank"><i class="fab fa-twitter text-primary"></i></a>
-                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/lpp_pekanbaru/" target="_blank"><i class="fab fa-instagram text-primary"></i></a>
-                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.tiktok.com/@lpp_pekanbaru" target="_blank"><i class="fab fa-tiktok text-primary"></i></a>
+                                 <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/lpperempuanpekanbaru/?hl=en" target="_blank"><i class="fab fa-instagram text-primary"></i></a>
+                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/people/lpperempuanpekanbaru/100089841414386/" target="_blank"><i class="fab fa-facebook-f text-primary"></i></a>
+                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.tiktok.com/@lapasperempuanpkbr" target="_blank"><i class="fab fa-tiktok text-primary"></i></a>
+                                <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://x.com/LppPku/" target="_blank"><i class="fab fa-twitter text-primary"></i></a>
                             </div>
                         </div>
                     </div>

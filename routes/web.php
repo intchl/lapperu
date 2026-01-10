@@ -2,36 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\ProdukWbpController;
 
-//use Illuminate\Support\Facades\DB;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/master', function () {
-    return view('user.layout.master');
-});
+// --- USER ROUTES ---
 Route::get('/', function () {
     return view('user.pages.index');
 });
-
-// user
-Route::get('/berita-kami', function () {
-    return view('user.pages.berita');
+Route::get('/profil', function () {
+    return view('user.pages.profil');
 });
-Route::get('/berita-detail', function () {
-    return view('user.pages.berita-detail');
+Route::get('/struktur-organisasi', function () {
+    return view('user.pages.struktur');
 });
-
 Route::get('/daftar-pengunjung', function () {
     return view('user.pages.daftar-pengunjung');
 });
@@ -39,46 +20,19 @@ Route::get('/form-pengunjung', function () {
     return view('user.pages.form-pengunjung');
 });
 
-Route::get('/profil', function () {
-    return view('user.pages.profil');
-});
+// Berita User
+Route::get('/berita-kami', [BeritaController::class, 'userIndex'])->name('user.berita.index');
+Route::get('/berita-detail/{id}', [BeritaController::class, 'show'])->name('berita.detail');
 
-// admin
-Route::get('/lpp', function () {
-    return view('admin.layout.master');
+// --- ADMIN ROUTES ---
+Route::get('/login', function () {
+    return view('admin.login');
 });
-
 Route::get('/dashboard', function () {
     return view('admin.index');
-});
+})->name('admin.dashboard');
 
-Route::get('/berita', function () {
-    return view('admin.berita.index');
-});
-
-Route::get('/tambah-berita', function () {
-    return view('admin.berita.add');
-});
-
-Route::get('/edit-berita', function () {
-    return view('admin.berita.edit');
-});
-
-Route::get('/lihat-berita', function () {
-    return view('admin.berita.show');
-});
-
-
-Route::get('/blank', function () {
-    return view('user.pages.blank');
-});
-
-Route::get('/Berita', [BeritaController::class, 'index']);
-Route::resource('berita', BeritaController::class);
-
-//Route::get('/ProdukWbp', [ProdukWbpController::class, 'index']);
-//Route::resource('berita', ProdukWbpController::class);
-
+// Admin CRUD Berita (Otomatis menghandle index, create, store, show, edit, update, destroy)
 Route::resource('berita', BeritaController::class)->names([
     'index'   => 'berita.index',
     'create'  => 'berita.create',
@@ -88,7 +42,3 @@ Route::resource('berita', BeritaController::class)->names([
     'update'  => 'berita.update',
     'destroy' => 'berita.destroy',
 ]);
-
-// USER DETAIL BERITA
-Route::get('/berita/{id}', [BeritaController::class, 'detail'])
-    ->name('berita.detail');

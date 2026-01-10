@@ -1,4 +1,4 @@
-<div class="container-fluid bg-breadcrumb">
+{{-- <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">@yield('pages_name')</h1>
                 <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
@@ -8,4 +8,4 @@
                 </ol>    
             </div>
         </div>
-        <!-- Header End -->
+        <!-- Header End --> --}}

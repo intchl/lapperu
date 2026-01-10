@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class BeritaController extends Controller
 {
-    // ===================== ADMIN =====================
+    // ===================== ADMIN SIDE =====================
     public function index()
     {
         $berita = Berita::orderBy('tanggal', 'desc')->get();
@@ -39,8 +40,22 @@ class BeritaController extends Controller
             'dilihat' => 0
         ]);
 
-        return redirect()->route('berita.index')
-            ->with('success', 'Berita berhasil ditambahkan');
+        return redirect()->route('berita.index')->with('success', 'Berita berhasil ditambahkan');
+    }
+
+    // Fungsi Show: Digunakan Admin (berita.show) dan User (berita.detail)
+    public function show($id)
+    {
+        $berita = Berita::findOrFail($id);
+        $berita->increment('dilihat');
+
+        // Jika URL mengandung 'berita-detail', arahkan ke tampilan User
+        if (request()->is('*berita-detail*')) {
+            return view('user.pages.berita-detail', compact('berita'));
+        }
+
+        // Default: Arahkan ke tampilan Admin
+        return view('admin.berita.show', compact('berita'));
     }
 
     public function edit($id)
@@ -59,53 +74,37 @@ class BeritaController extends Controller
         ]);
 
         $berita = Berita::findOrFail($id);
-
         $berita->judul   = $request->judul;
         $berita->tanggal = $request->tanggal;
         $berita->isi     = $request->isi;
 
         if ($request->hasFile('foto')) {
-            if ($berita->foto && file_exists(public_path('images/berita/' . $berita->foto))) {
-                unlink(public_path('images/berita/' . $berita->foto));
+            if ($berita->foto && File::exists(public_path('images/berita/' . $berita->foto))) {
+                File::delete(public_path('images/berita/' . $berita->foto));
             }
-
             $namaFoto = time() . '.' . $request->foto->extension();
             $request->foto->move(public_path('images/berita'), $namaFoto);
             $berita->foto = $namaFoto;
         }
 
         $berita->save();
-
-        return redirect()->route('berita.index')
-            ->with('success', 'Berita berhasil diperbarui');
+        return redirect()->route('berita.index')->with('success', 'Berita berhasil diperbarui');
     }
 
     public function destroy($id)
     {
         $berita = Berita::findOrFail($id);
-
-        if ($berita->foto && file_exists(public_path('images/berita/' . $berita->foto))) {
-            unlink(public_path('images/berita/' . $berita->foto));
+        if ($berita->foto && File::exists(public_path('images/berita/' . $berita->foto))) {
+            File::delete(public_path('images/berita/' . $berita->foto));
         }
-
         $berita->delete();
-
-        return redirect()->route('berita.index')
-            ->with('success', 'Berita berhasil dihapus');
+        return redirect()->route('berita.index')->with('success', 'Berita berhasil dihapus');
     }
 
-    // ===================== USER =====================
+    // ===================== USER SIDE =====================
     public function userIndex()
     {
         $berita = Berita::orderBy('tanggal', 'desc')->get();
         return view('user.pages.berita', compact('berita'));
-    }
-
-    public function detail($id)
-    {
-        $berita = Berita::findOrFail($id);
-        $berita->increment('dilihat');
-
-        return view('user.pages.berita-detail', compact('berita'));
     }
 }
